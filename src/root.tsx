@@ -5,9 +5,9 @@ import "./index.css";
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="pl">
       <head>
-        <title>vite-boilerplate</title>
+        <title>dzialaj-org</title>
       </head>
       <body>
         <Outlet />
