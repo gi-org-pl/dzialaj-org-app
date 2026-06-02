@@ -1,8 +1,8 @@
-# Vite Project Boilerplate
+# Działaj.org
 
 ## Repository contents
 
-Repository contains boilerplate project using Vite.
+Repository contains Działaj.org project using Vite.
 
 Project is using tools in versions listed below:
 
@@ -42,7 +42,7 @@ Project's main dependencies are listed below.
 
 ## Infrastructure
 
-This is a frontend-only boilerplate that runs locally using Vite development server.
+This is a frontend-only project that runs locally using Vite development server.
 
 ## Setting project up
 
@@ -67,7 +67,7 @@ This app uses Node.js and Yarn package manager. In order to set up project, foll
 4. Navigate to the project directory:
 
    ```shell
-   cd vite-project-boilerplate
+   cd dzialaj-org-app
    ```
 
 5. Install dependencies using Yarn:
@@ -110,7 +110,7 @@ Build the project with `yarn build` and preview the production build locally wit
 
 ## Testing
 
-This boilerplate includes both unit testing and end-to-end testing:
+This project includes both unit testing and end-to-end testing:
 
 - **Unit Tests**: Uses Vitest with React Testing Library for component and utility testing
 - **E2E Tests**: Uses Playwright for browser-based end-to-end testing
@@ -126,7 +126,7 @@ yarn e2e:ui            # Run E2E tests in UI mode
 
 ## Linting
 
-This boilerplate uses BiomeJS for code linting and formatting. Biome is a fast, all-in-one toolchain that replaces ESLint, Prettier, and other tools.
+This project uses BiomeJS for code linting and formatting. Biome is a fast, all-in-one toolchain that replaces ESLint, Prettier, and other tools.
 
 - **Linter**: BiomeJS provides fast linting with TypeScript support
 - **Formatter**: Built-in code formatter with consistent style
@@ -143,7 +143,7 @@ The project is configured with custom linting rules in `biome.json`, including c
 
 ## Visual testing
 
-This boilerplate uses Storybook for visual testing and component development. Storybook provides an isolated environment to develop, test, and document UI components independently.
+This project uses Storybook for visual testing and component development. Storybook provides an isolated environment to develop, test, and document UI components independently.
 
 - **Component Development**: Build and test components in isolation
 - **Visual Testing**: Preview components with different props and states

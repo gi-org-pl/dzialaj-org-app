@@ -21,7 +21,7 @@
     "storybook:build": "storybook build"
   },
   "dependencies": {
-    "@gi/athena": "https://github.com/Generacja-Innowacja/athena.git",
+    "@gi/athena": "https://github.com/Generacja-Innowacja/athena.git#1.0.2",
     "@react-router/fs-routes": "^7.9.6",
     "@react-router/node": "^7.9.6",
     "@react-router/serve": "^7.9.6",
