@@ -1,0 +1,11 @@
+import DzialajOrgLogo from "@/assets/icons/logo.svg";
+import { PATHS } from "@/constants/common";
+import { Link } from "react-router";
+
+export const Logo = () => {
+  return (
+    <Link to={PATHS.HOME}>
+      <img src={DzialajOrgLogo} alt="Działaj.org" width={104} height={24} />
+    </Link>
+  );
+};
