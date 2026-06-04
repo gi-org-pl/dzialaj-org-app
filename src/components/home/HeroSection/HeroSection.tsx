@@ -41,8 +41,8 @@ const HeroSectionIllustration = ({
   <div
     className={twMerge(
       "pointer-events-none absolute z-0 w-full",
-      "top-12 left-1/2 -translate-x-1/2",
-      "@lg:top-1/2 @lg:right-0 @lg:left-auto @lg:translate-x-0 @lg:-translate-y-1/2",
+      "top-8 left-1/2 -translate-x-1/2",
+      "lg:top-12 lg:right-0 lg:left-auto lg:translate-x-0",
     )}
   >
     <img
