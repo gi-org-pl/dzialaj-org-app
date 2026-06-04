@@ -67,7 +67,9 @@ describe("<HeroSection />", () => {
     it("should display the supporting body text", () => {
       render(<HeroSection {...HERO_SECTION_DEFAULT_PROPS} />);
 
-      expect(screen.getByText(HERO_SECTION_DEFAULT_BODY_TEXT)).toBeInTheDocument();
+      expect(
+        screen.getByText(HERO_SECTION_DEFAULT_BODY_TEXT),
+      ).toBeInTheDocument();
     });
 
     it("should render the mascot illustration from default props", () => {
@@ -118,7 +120,10 @@ describe("<HeroSection />", () => {
         name: customHeroProps.illustrationAlt,
       });
 
-      expect(mascotImage).toHaveAttribute("src", customHeroProps.illustrationSrc);
+      expect(mascotImage).toHaveAttribute(
+        "src",
+        customHeroProps.illustrationSrc,
+      );
       expect(mascotImage).not.toHaveAttribute("aria-hidden", "true");
     });
   });
