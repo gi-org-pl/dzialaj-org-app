@@ -22,9 +22,19 @@ export const Default: Story = {
 
 export const Mobile: Story = {
   args: HERO_SECTION_DEFAULT_PROPS,
+  decorators: [
+    (Story) => (
+      <div className="mx-auto w-full max-w-[388px]">
+        <Story />
+      </div>
+    ),
+  ],
   parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
+    docs: {
+      description: {
+        story:
+          "Mobile layout preview at 388px container width (Figma). Differs from Default via container queries.",
+      },
     },
   },
 };

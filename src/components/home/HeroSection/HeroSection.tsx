@@ -21,7 +21,7 @@ const HeroSectionHeadline = ({
 }: HeroSectionProps) => (
   <h1
     id={HERO_SECTION_HEADLINE_ID}
-    className="text-[32px] font-extrabold leading-[1.2] lg:text-5xl"
+    className="text-[32px] font-extrabold leading-[1.2] @lg:text-5xl"
   >
     <span className="block text-gi-primary">{headlineLine1}</span>
     <span className="block text-gi-blue">{headlineLine2}</span>
@@ -29,7 +29,7 @@ const HeroSectionHeadline = ({
 );
 
 const HeroSectionBody = ({ bodyText }: HeroSectionProps) => (
-  <p className="w-full max-w-sm text-base font-normal leading-[1.2] text-gi-dark-gray lg:text-xl">
+  <p className="w-full max-w-sm text-base font-normal leading-[1.2] text-gi-dark-gray @lg:text-xl">
     {bodyText}
   </p>
 );
@@ -42,7 +42,7 @@ const HeroSectionIllustration = ({
     className={twMerge(
       "pointer-events-none absolute z-0 w-full",
       "top-12 left-1/2 -translate-x-1/2",
-      "lg:top-1/2 lg:right-0 lg:left-auto lg:translate-x-0 lg:-translate-y-1/2",
+      "@lg:top-1/2 @lg:right-0 @lg:left-auto @lg:translate-x-0 @lg:-translate-y-1/2",
     )}
   >
     <img
@@ -55,7 +55,7 @@ const HeroSectionIllustration = ({
 );
 
 const HeroSectionContent = (props: HeroSectionProps) => (
-  <div className="relative z-10 flex w-full flex-col items-start gap-4 lg:max-w-xl">
+  <div className="relative z-10 flex w-full flex-col items-start gap-4 @lg:max-w-xl">
     <HeroSectionBadge {...props} />
     <HeroSectionHeadline {...props} />
     <HeroSectionBody {...props} />
@@ -69,8 +69,8 @@ export const HeroSection = (props: HeroSectionProps) => (
   >
     <div
       className={twMerge(
-        "relative mx-auto w-full max-w-7xl px-4 py-8",
-        "min-h-[200px] sm:min-h-[220px] lg:min-h-[252px] lg:py-12",
+        "@container relative mx-auto w-full max-w-7xl px-4 py-8",
+        "min-h-[200px] @lg:min-h-[252px] @lg:py-12",
       )}
     >
       <HeroSectionIllustration {...props} />
