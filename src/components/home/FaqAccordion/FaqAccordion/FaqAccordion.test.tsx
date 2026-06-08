@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, it, expect, vi, beforeEach } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion/FaqAccordion";
 
 vi.mock("@gi/athena", () => {
@@ -11,7 +11,11 @@ vi.mock("@gi/athena", () => {
         <div data-testid="select-content">{children}</div>
       </div>
     ),
-    ActionList: ({ items }: { items: Array<{ label: React.ReactNode; onClick?: () => void }>; }) => (
+    ActionList: ({
+      items,
+    }: {
+      items: Array<{ label: React.ReactNode; onClick?: () => void }>;
+    }) => (
       <div role="menu">
         {items.map((it, idx) => (
           <button
@@ -37,13 +41,15 @@ const groups = [
         id: "q1-k",
         question: "Muszę mieć doświadczenie?",
         answerPrefix: "Nie.",
-        answerBody: "Większość ofert na Działaj jest dla osób, które dopiero zaczynają.",
+        answerBody:
+          "Większość ofert na Działaj jest dla osób, które dopiero zaczynają.",
       },
       {
         id: "q2-k",
         question: "Co dostanę na koniec?",
         answerPrefix: null,
-        answerBody: "Większość organizacji wystawia zaświadczenie albo referencje.",
+        answerBody:
+          "Większość organizacji wystawia zaświadczenie albo referencje.",
       },
     ],
   },
@@ -70,25 +76,32 @@ describe("FaqAccordion", () => {
 
   it("renders the heading and default group's items", () => {
     render(
-      <FaqAccordion heading={heading} groups={groups as any} defaultGroupId="Kandydaci" />
+      <FaqAccordion
+        heading={heading}
+        groups={groups as any}
+        defaultGroupId="Kandydaci"
+      />,
     );
 
     expect(
-      screen.getByRole("heading", { level: 2, name: heading })
+      screen.getByRole("heading", { level: 2, name: heading }),
     ).toBeInTheDocument();
 
     expect(screen.getByTestId("select-value")).toHaveTextContent("Kandydaci");
 
     expect(
-      screen.getByRole("heading", { level: 3, name: "Muszę mieć doświadczenie?" })
+      screen.getByRole("heading", {
+        level: 3,
+        name: "Muszę mieć doświadczenie?",
+      }),
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole("heading", { level: 3, name: "Co dostanę na koniec?" })
+      screen.getByRole("heading", { level: 3, name: "Co dostanę na koniec?" }),
     ).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("heading", { level: 3, name: "Ile to kosztuje?" })
+      screen.queryByRole("heading", { level: 3, name: "Ile to kosztuje?" }),
     ).not.toBeInTheDocument();
   });
 
@@ -96,23 +109,36 @@ describe("FaqAccordion", () => {
     const user = userEvent.setup();
 
     render(
-      <FaqAccordion heading={heading} groups={groups as any} defaultGroupId="Kandydaci" />
+      <FaqAccordion
+        heading={heading}
+        groups={groups as any}
+        defaultGroupId="Kandydaci"
+      />,
     );
 
     const menu = screen.getByRole("menu");
-    expect(within(menu).getByRole("menuitem", { name: "Kandydaci" })).toBeInTheDocument();
-    expect(within(menu).getByRole("menuitem", { name: "Organizacje" })).toBeInTheDocument();
+    expect(
+      within(menu).getByRole("menuitem", { name: "Kandydaci" }),
+    ).toBeInTheDocument();
+    expect(
+      within(menu).getByRole("menuitem", { name: "Organizacje" }),
+    ).toBeInTheDocument();
 
-    await user.click(within(menu).getByRole("menuitem", { name: "Organizacje" }));
+    await user.click(
+      within(menu).getByRole("menuitem", { name: "Organizacje" }),
+    );
 
     expect(screen.getByTestId("select-value")).toHaveTextContent("Organizacje");
 
     expect(
-      screen.getByRole("heading", { level: 3, name: "Ile to kosztuje?" })
+      screen.getByRole("heading", { level: 3, name: "Ile to kosztuje?" }),
     ).toBeInTheDocument();
 
     expect(
-      screen.queryByRole("heading", { level: 3, name: "Muszę mieć doświadczenie?" })
+      screen.queryByRole("heading", {
+        level: 3,
+        name: "Muszę mieć doświadczenie?",
+      }),
     ).not.toBeInTheDocument();
   });
 });
