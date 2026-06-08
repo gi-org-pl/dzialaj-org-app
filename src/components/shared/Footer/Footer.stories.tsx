@@ -32,7 +32,7 @@ const meta = {
   },
   args: {
     links: DEFAULT_LINKS,
-    showOrganizationPanel: false,
+    showOrganizationPanel: true,
   },
   tags: ["autodocs"],
 } satisfies Meta<typeof Footer>;
@@ -41,37 +41,3 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
-
-export const WithOrganizationPanel: Story = {
-  name: "With Organization Panel (Mobile)",
-  args: {
-    showOrganizationPanel: true,
-  },
-  globals: {
-    viewport: { value: "mobile1" },
-  },
-};
-
-export const MobileLayout: Story = {
-  name: "Mobile Layout",
-  globals: {
-    viewport: { value: "mobile1" },
-  },
-};
-
-export const DesktopLayout: Story = {
-  name: "Desktop Layout",
-  globals: {
-    viewport: { value: "desktop" },
-  },
-};
-
-export const DesktopWithOrganizationPanel: Story = {
-  name: "Desktop Layout (Panel Organizacji Hidden)",
-  args: {
-    showOrganizationPanel: true,
-  },
-  globals: {
-    viewport: { value: "desktop" },
-  },
-};
