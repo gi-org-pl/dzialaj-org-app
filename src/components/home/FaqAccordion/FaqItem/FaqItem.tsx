@@ -1,4 +1,4 @@
-import { type FaqItem } from "@/components/home/FaqAccordion/FaqAccordion/FaqAccordion.types.ts";
+import { type FaqItem } from "@/components/home/FaqAccordion/FaqAccordion.types.ts";
 
 export default function FaqItem({
   id,
@@ -8,8 +8,8 @@ export default function FaqItem({
 }: FaqItem) {
   const renderHeader = () => {
     return (
-      <div className="flex items-center justify-center border border-solid border-gi-gray rounded-t-2xl">
-        <h3 className="w-full bg-white text-gi-dark-primary text-left text-xl font-bold p-4 rounded-t-2xl">
+      <div className="flex items-center justify-center border border-solid border-gi-gray rounded-t-3xl">
+        <h3 className="w-full bg-white text-gi-dark-primary text-left text-xl font-bold p-4 rounded-t-3xl">
           {question}
         </h3>
       </div>
@@ -18,7 +18,7 @@ export default function FaqItem({
 
   const renderBody = () => {
     return (
-      <div className="flex flex-col justify-center p-4 border-b border-x border-solid border-gi-gray rounded-b-2xl">
+      <div className="flex flex-col justify-center p-4 border-b border-x border-solid border-gi-gray rounded-b-3xl">
         <p className="text-xl text-gi-dark-primary">
           <span className="text-gi-blue font-bold">{answerPrefix}</span>{" "}
           {answerBody}
@@ -28,7 +28,7 @@ export default function FaqItem({
   };
 
   return (
-    <div key={id} className="w-full text-gi-dark-grey">
+    <div key={id} className="w-full text-gi-dark-gray">
       {renderHeader()}
       {renderBody()}
     </div>

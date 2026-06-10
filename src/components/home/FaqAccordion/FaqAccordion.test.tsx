@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
-import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion/FaqAccordion";
+import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion";
 
 vi.mock("@gi/athena", () => {
   return {
