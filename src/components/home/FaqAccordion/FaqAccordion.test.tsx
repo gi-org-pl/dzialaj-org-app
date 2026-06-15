@@ -2,6 +2,7 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion";
+import { faqHeading, faqGroups } from "@/components/home/FaqAccordion/FaqAccordion.constants";
 
 vi.mock("@gi/athena", () => {
   return {
@@ -32,42 +33,7 @@ vi.mock("@gi/athena", () => {
   };
 });
 
-const groups = [
-  {
-    id: "Kandydaci",
-    label: "Kandydaci",
-    items: [
-      {
-        id: "q1-k",
-        question: "Muszę mieć doświadczenie?",
-        answerPrefix: "Nie.",
-        answerBody:
-          "Większość ofert na Działaj jest dla osób, które dopiero zaczynają.",
-      },
-      {
-        id: "q2-k",
-        question: "Co dostanę na koniec?",
-        answerPrefix: null,
-        answerBody:
-          "Większość organizacji wystawia zaświadczenie albo referencje.",
-      },
-    ],
-  },
-  {
-    id: "Organizacje",
-    label: "Organizacje",
-    items: [
-      {
-        id: "q1-o",
-        question: "Ile to kosztuje?",
-        answerPrefix: "0 zł",
-        answerBody: "Publikacja oferty jest darmowa.",
-      },
-    ],
-  },
-] as const;
 
-const heading = "Pytania i odpowiedzi";
 
 describe("FaqAccordion", () => {
   beforeEach(() => {
@@ -77,14 +43,14 @@ describe("FaqAccordion", () => {
   it("renders the heading and default group's items", () => {
     render(
       <FaqAccordion
-        heading={heading}
-        groups={groups as any}
+        heading={faqHeading}
+        groups={faqGroups}
         defaultGroupId="Kandydaci"
       />,
     );
 
     expect(
-      screen.getByRole("heading", { level: 2, name: heading }),
+      screen.getByRole("heading", { level: 2, name: faqHeading }),
     ).toBeInTheDocument();
 
     expect(screen.getByTestId("select-value")).toHaveTextContent("Kandydaci");
@@ -110,8 +76,8 @@ describe("FaqAccordion", () => {
 
     render(
       <FaqAccordion
-        heading={heading}
-        groups={groups as any}
+        heading={faqHeading}
+        groups={faqGroups as any}
         defaultGroupId="Kandydaci"
       />,
     );
