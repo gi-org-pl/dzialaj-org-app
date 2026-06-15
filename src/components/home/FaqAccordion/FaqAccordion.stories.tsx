@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
+import {
+  faqGroups,
+  faqHeading,
+} from "@/components/home/FaqAccordion/FaqAccordion.constants";
 import FaqAccordion from "./FaqAccordion";
-import { faqHeading, faqGroups } from "@/components/home/FaqAccordion/FaqAccordion.constants";
 
 const meta = {
   title: "Home/FaqAccordion",

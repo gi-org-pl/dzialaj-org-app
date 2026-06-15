@@ -36,7 +36,7 @@ export default function FaqAccordion({
 
   const renderBody = () => {
     return (
-      <div className="flex flex-col w-full items-center justify-center  px-6 pb-6 gap-3 rounded-b-4xl bg-gi-blue/10">
+      <div className="flex flex-col w-full items-center justify-center px-6 pb-6 gap-3 rounded-b-4xl bg-gi-blue/10">
         {currentGroup?.items.map((item) => (
           <FaqItem key={item.id} {...item} />
         ))}

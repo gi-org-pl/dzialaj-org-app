@@ -2,7 +2,10 @@ import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion";
-import { faqHeading, faqGroups } from "@/components/home/FaqAccordion/FaqAccordion.constants";
+import {
+  faqGroups,
+  faqHeading,
+} from "@/components/home/FaqAccordion/FaqAccordion.constants";
 
 vi.mock("@gi/athena", () => {
   return {
@@ -32,8 +35,6 @@ vi.mock("@gi/athena", () => {
     ),
   };
 });
-
-
 
 describe("FaqAccordion", () => {
   beforeEach(() => {
