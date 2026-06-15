@@ -24,9 +24,8 @@ export const faqGroups: FaqGroup[] = [
       {
         id: "q3-k",
         question: "Czy zarobię?",
-        answerPrefix: 'Nie.',
-        answerBody:
-          "Wolontariat przynosi doświadczenie i rozwój, nie wypłatę.",
+        answerPrefix: "Nie.",
+        answerBody: "Wolontariat przynosi doświadczenie i rozwój, nie wypłatę.",
       },
     ],
   },
@@ -50,7 +49,8 @@ export const faqGroups: FaqGroup[] = [
         id: "q3-o",
         question: "Co dostanę, czego nie ma na innych portalach?",
         answerPrefix: null,
-        answerBody: "Dotarcie do osób spoza Waszej bańki - ludzi, którzy o Was nie słyszeli, ale szukają dokładnie takich projektów jak Wasze.",
+        answerBody:
+          "Dotarcie do osób spoza Waszej bańki - ludzi, którzy o Was nie słyszeli, ale szukają dokładnie takich projektów jak Wasze.",
       },
     ],
   },
