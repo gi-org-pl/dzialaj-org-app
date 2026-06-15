@@ -21,14 +21,6 @@ type Story = StoryObj<typeof CategoryFiltersStory>;
 
 export const Default: Story = {};
 
-export const Mobile: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
-    },
-  },
-};
-
 export const Selected: Story = {
   args: {
     ...CATEGORY_FILTERS_DATA,
