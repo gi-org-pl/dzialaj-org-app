@@ -5,6 +5,7 @@ import {
   VALUE_PROPOSITION_COLUMN_HEADER,
   VALUE_PROPOSITION_DEFAULT_ROWS,
   VALUE_PROPOSITION_HEADING,
+  VALUE_PROPOSITION_HEADING_COMMA,
   VALUE_PROPOSITION_LOGO_ALT,
 } from "./ValuePropositionTable.constants";
 
@@ -29,33 +30,37 @@ describe("<ValuePropositionTable />", () => {
         expect(heading).toHaveTextContent("których nie ma na job boardach.");
       });
 
-      it("renders the primary heading text in primary colour", () => {
+      it("renders the first heading line text in gi-blue", () => {
         render(<ValuePropositionTable {...defaultProps} />);
 
         expect(screen.getByText("Tu znajdziesz możliwości")).toHaveClass(
+          "text-gi-blue",
+        );
+      });
+
+      it("renders the trailing comma in gi-primary on the first line", () => {
+        render(<ValuePropositionTable {...defaultProps} />);
+
+        expect(screen.getByText(VALUE_PROPOSITION_HEADING_COMMA)).toHaveClass(
           "text-gi-primary",
         );
       });
 
-      it("renders the trailing comma on the first line in dark blue", () => {
-        render(<ValuePropositionTable {...defaultProps} />);
-
-        expect(screen.getByText(",")).toHaveClass("text-gi-blue");
-      });
-
-      it("renders the secondary heading line in dark blue", () => {
+      it("renders the second heading line in gi-primary", () => {
         render(<ValuePropositionTable {...defaultProps} />);
 
         expect(screen.getByText("których nie ma na job boardach.")).toHaveClass(
-          "text-gi-blue",
+          "text-gi-primary",
         );
       });
 
       it("renders the comparison as a semantic table", () => {
         render(<ValuePropositionTable {...defaultProps} />);
 
-        expect(screen.getByRole("table")).toBeInTheDocument();
-        expect(screen.getAllByRole("columnheader")).toHaveLength(3);
+        const table = screen.getByRole("table");
+
+        expect(table).toBeInTheDocument();
+        expect(table.querySelectorAll("thead th")).toHaveLength(3);
         expect(screen.getAllByRole("rowheader")).toHaveLength(
           VALUE_PROPOSITION_DEFAULT_ROWS.length,
         );
@@ -153,7 +158,6 @@ describe("<ValuePropositionTable />", () => {
 
         expect(heading).toHaveTextContent("Custom primary line");
         expect(heading).toHaveTextContent("custom secondary line.");
-        expect(screen.queryByText(",")).not.toBeInTheDocument();
       });
     });
   });

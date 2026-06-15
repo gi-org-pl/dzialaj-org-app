@@ -3,6 +3,8 @@ import type { ComparisonRow } from "./ValuePropositionTable.types";
 export const VALUE_PROPOSITION_HEADING =
   "Tu znajdziesz możliwości\nktórych nie ma na job boardach.";
 
+export const VALUE_PROPOSITION_HEADING_COMMA = ",";
+
 export const VALUE_PROPOSITION_COLUMN_HEADER = "Job Boardy";
 
 export const VALUE_PROPOSITION_LOGO_ALT = "działaj logo";

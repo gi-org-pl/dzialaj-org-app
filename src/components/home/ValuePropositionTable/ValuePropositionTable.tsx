@@ -1,6 +1,7 @@
 import logoDzialaj from "@/assets/vectors/logo-dzialaj.svg";
 import {
   VALUE_PROPOSITION_COLUMN_HEADER,
+  VALUE_PROPOSITION_HEADING_COMMA,
   VALUE_PROPOSITION_LOGO_ALT,
 } from "./ValuePropositionTable.constants";
 import type { ValuePropositionTableProps } from "./ValuePropositionTable.types";
@@ -11,15 +12,18 @@ export const ValuePropositionTable = ({
   illustrationSrc,
   illustrationAlt,
 }: ValuePropositionTableProps) => {
-  const [primaryLine = "", secondaryLine = ""] = heading.split("\n");
+  const [lineOne = "", lineTwo = ""] = heading.split("\n");
 
   return (
     <section className="flex flex-col gap-6">
       <h2 className="text-[32px] font-extrabold leading-[1.2]">
-        <span className="text-gi-blue">{primaryLine}</span>
-        <span className="text-gi-primary">,</span>
-        <br />
-        <span className="text-gi-primary">{secondaryLine}</span>
+        <span className="block">
+          <span className="text-gi-blue">{lineOne}</span>
+          <span className="text-gi-primary">
+            {VALUE_PROPOSITION_HEADING_COMMA}
+          </span>
+        </span>
+        <span className="block text-gi-primary">{lineTwo}</span>
       </h2>
 
       <div className="relative rounded-3xl border border-gi-dark-ash">
