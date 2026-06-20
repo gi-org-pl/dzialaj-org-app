@@ -1,7 +1,6 @@
 import { Avatar } from "@gi/athena";
 import { twMerge } from "tailwind-merge";
 
-import { TESTIMONIAL_CARD_AUTHOR_ORGANISATION_SEPARATOR } from "./TestimonialCard.constants";
 import type { Testimonial } from "../TestimonialCarousel.types";
 import { parseQuote } from "./parseQuote";
 
@@ -39,7 +38,7 @@ const TestimonialCardAuthor = ({
     <p className="text-base">
       <span className="font-extrabold text-gi-navy">{authorName}</span>
       <span className="font-normal text-gi-navy">
-        {TESTIMONIAL_CARD_AUTHOR_ORGANISATION_SEPARATOR}
+        {" "}
         {authorOrganisation}
       </span>
     </p>
@@ -52,7 +51,7 @@ export const TestimonialCard = ({
 }: TestimonialCardProps) => (
   <article
     className={twMerge(
-      "flex h-full w-full flex-col gap-4 rounded-[32px] border border-gi-light-gray bg-white p-4 leading-[1.2] @lg:p-8",
+      "flex h-full w-full flex-col gap-4 rounded-4xl border border-gi-light-gray bg-white p-4 leading-[1.2] @lg:p-8",
       className,
     )}
   >

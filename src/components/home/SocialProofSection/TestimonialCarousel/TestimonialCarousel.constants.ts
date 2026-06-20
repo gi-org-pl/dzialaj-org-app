@@ -6,9 +6,9 @@ import type {
 } from "./TestimonialCarousel.types";
 
 export const TESTIMONIAL_CAROUSEL_REGION_LABEL = "Opinie wolontariuszy";
-export const TESTIMONIAL_CAROUSEL_PAGINATION_WRAPPER_CLASS_NAME = "pt-4";
 export const TESTIMONIAL_CAROUSEL_DOTS_TEST_ID = "testimonial-carousel-dots";
 export const TESTIMONIAL_CAROUSEL_AUTO_PLAY_INTERVAL_MS = 6000;
+export const CLONE_SLIDE_VISIBLE_THRESHOLD = 0.99;
 
 export const TESTIMONIAL_CAROUSEL_QUOTE_1 =
   "[u]Dzięki wolontariatowi[/u] poznałem wielu przyjaciół i zdobyłem doświadczenie, o którym zawsze marzyłem!";

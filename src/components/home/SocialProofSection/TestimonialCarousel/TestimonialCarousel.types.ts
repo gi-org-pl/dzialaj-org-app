@@ -11,3 +11,9 @@ export type TestimonialCarouselProps = {
   testimonials: Testimonial[];
   autoPlayIntervalMs?: number;
 };
+
+export type CarouselSlide = {
+  testimonial: Testimonial;
+  slideIndex: number;
+  isClone: boolean;
+};

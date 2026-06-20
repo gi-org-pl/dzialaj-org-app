@@ -2,24 +2,17 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 import {
+  CLONE_SLIDE_VISIBLE_THRESHOLD,
   TESTIMONIAL_CAROUSEL_AUTO_PLAY_INTERVAL_MS,
   TESTIMONIAL_CAROUSEL_DOTS_TEST_ID,
-  TESTIMONIAL_CAROUSEL_PAGINATION_WRAPPER_CLASS_NAME,
   TESTIMONIAL_CAROUSEL_REGION_LABEL,
 } from "./TestimonialCarousel.constants";
 import type {
+  CarouselSlide,
   Testimonial,
   TestimonialCarouselProps,
 } from "./TestimonialCarousel.types";
 import { TestimonialCard } from "./TestimonialCard/TestimonialCard";
-
-const CLONE_SLIDE_VISIBLE_THRESHOLD = 0.99;
-
-type CarouselSlide = {
-  testimonial: Testimonial;
-  slideIndex: number;
-  isClone: boolean;
-};
 
 type TestimonialCarouselDotsProps = {
   totalSlides: number;
@@ -42,7 +35,7 @@ const TestimonialCarouselDots = ({
         <span
           key={`testimonial-dot-${index}`}
           className={twMerge(
-            "size-[8px] rounded-full transition-colors",
+            "size-2 rounded-full transition-colors",
             isActive ? "bg-gi-navy" : "bg-gi-light-gray-dark",
           )}
         />
@@ -294,7 +287,7 @@ export const TestimonialCarousel = ({
       </div>
 
       {hasPagination ? (
-        <div className={TESTIMONIAL_CAROUSEL_PAGINATION_WRAPPER_CLASS_NAME}>
+        <div className="pt-4">
           <TestimonialCarouselDots
             totalSlides={testimonials.length}
             activeIndex={activeIndex}
