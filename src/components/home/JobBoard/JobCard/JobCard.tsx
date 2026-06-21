@@ -1,7 +1,7 @@
 import { Avatar, Badge } from "@gi/athena";
 import { twMerge } from "tailwind-merge";
 import { JOB_CARD_STRINGS } from "./JobCard.constants";
-import type { JobCardProps, JobCardBadge } from "./JobCard.types";
+import type { JobCardBadge, JobCardProps } from "./JobCard.types";
 
 function getBadgeVariant(
   label: string,

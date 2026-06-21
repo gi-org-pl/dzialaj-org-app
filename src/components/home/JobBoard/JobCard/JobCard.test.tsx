@@ -1,7 +1,7 @@
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { JOB_CARD_STRINGS } from "./JobCard.constants";
 import { JobCard } from "./JobCard";
+import { JOB_CARD_STRINGS } from "./JobCard.constants";
 import type { JobCardBadge } from "./JobCard.types";
 
 const mockBadges: JobCardBadge[] = [
