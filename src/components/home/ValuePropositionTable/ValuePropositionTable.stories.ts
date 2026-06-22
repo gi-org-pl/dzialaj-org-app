@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import mascotLightbulbPose from "@/assets/images/mascot-lightbulb-pose.png";
 import { ValuePropositionTable } from "./ValuePropositionTable";
 import {
   VALUE_PROPOSITION_DEFAULT_ROWS,
@@ -21,7 +22,7 @@ export const Default: Story = {
   args: {
     heading: VALUE_PROPOSITION_HEADING,
     rows: VALUE_PROPOSITION_DEFAULT_ROWS,
-    illustrationSrc: "/src/assets/images/mascot-lightbulb.png",
+    illustrationSrc: mascotLightbulbPose,
     illustrationAlt: "",
   },
 };

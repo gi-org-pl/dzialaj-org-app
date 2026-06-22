@@ -74,7 +74,7 @@ export const ValuePropositionTable = ({
           <img
             src={illustrationSrc}
             alt={illustrationAlt}
-            className="pointer-events-none absolute top-6 right-6 w-[236px] -scale-x-100"
+            className="pointer-events-none absolute top-6 right-10 w-[236px] -scale-x-100"
           />
         )}
       </div>
