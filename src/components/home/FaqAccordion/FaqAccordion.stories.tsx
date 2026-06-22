@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import {
-  faqGroups,
-  faqHeading,
+  FAQ_GROUPS,
+  FAQ_HEADING,
 } from "@/components/home/FaqAccordion/FaqAccordion.constants";
 import FaqAccordion from "./FaqAccordion";
 
@@ -26,8 +26,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    heading: faqHeading,
-    groups: faqGroups,
+    heading: FAQ_HEADING,
+    groups: FAQ_GROUPS,
     defaultGroupId: "Kandydaci",
   },
 };
