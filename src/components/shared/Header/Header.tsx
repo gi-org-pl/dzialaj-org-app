@@ -13,7 +13,7 @@ import type { HeaderProps } from "./Header.types";
 const Header = ({ navLinks = HEADER_NAV_ITEMS, className }: HeaderProps) => {
   return (
     <header className={twMerge("w-full ", className)}>
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-8 px-8 py-6 2xl:px-0">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 py-8 2xl:px-0">
         <Link
           to={HEADER_HOME_PATH}
           className="inline-flex items-center text-gi-light-gray transition-opacity duration-300 hover:opacity-80 focus:outline-none"
@@ -42,8 +42,8 @@ const Header = ({ navLinks = HEADER_NAV_ITEMS, className }: HeaderProps) => {
 
         <div className="flex items-center">
           <Button
-            variant="primary"
-            className="bg-gi-blue hover:bg-gi-blue-hover font-extrabold text-base leading-[1.2]"
+            variant="ngoSecondary"
+            className="font-extrabold text-base leading-[1.2]"
           >
             <img
               src={SearchIcon}
