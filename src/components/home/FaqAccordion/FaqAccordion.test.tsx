@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import FaqAccordion from "@/components/home/FaqAccordion/FaqAccordion";
 import {
-  faqGroups,
-  faqHeading,
+  FAQ_GROUPS,
+  FAQ_HEADING,
 } from "@/components/home/FaqAccordion/FaqAccordion.constants";
 
 vi.mock("@gi/athena", () => {
@@ -44,14 +44,14 @@ describe("FaqAccordion", () => {
   it("renders the heading and default group's items", () => {
     render(
       <FaqAccordion
-        heading={faqHeading}
-        groups={faqGroups}
+        heading={FAQ_HEADING}
+        groups={FAQ_GROUPS}
         defaultGroupId="Kandydaci"
       />,
     );
 
     expect(
-      screen.getByRole("heading", { level: 2, name: faqHeading }),
+      screen.getByRole("heading", { level: 2, name: FAQ_HEADING }),
     ).toBeInTheDocument();
 
     expect(screen.getByTestId("select-value")).toHaveTextContent("Kandydaci");
@@ -77,8 +77,8 @@ describe("FaqAccordion", () => {
 
     render(
       <FaqAccordion
-        heading={faqHeading}
-        groups={faqGroups as any}
+        heading={FAQ_HEADING}
+        groups={FAQ_GROUPS as any}
         defaultGroupId="Kandydaci"
       />,
     );
