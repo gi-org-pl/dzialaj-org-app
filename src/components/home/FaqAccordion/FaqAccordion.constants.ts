@@ -1,8 +1,8 @@
 import type { FaqGroup } from "@/components/home/FaqAccordion/FaqAccordion.types";
 
-export const faqHeading = "Pytania i odpowiedzi";
+export const FAQ_HEADING = "Pytania i odpowiedzi";
 
-export const faqGroups: FaqGroup[] = [
+export const FAQ_GROUPS: FaqGroup[] = [
   {
     id: "Kandydaci",
     label: "Kandydaci",
