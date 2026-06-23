@@ -9,6 +9,7 @@ const HeroSectionBadge = ({ badgeLabel }: HeroSectionProps) => (
     type="info"
     variant="secondary"
     size="big"
+    LeftIcon={<span />}
     className="text-base font-bold leading-[1.2] [&>span:first-child]:hidden"
   >
     {badgeLabel}
