@@ -2,7 +2,7 @@ import { PATHS } from "@/constants/common";
 
 export const LEGAL_INFO = {
   copyright: "© Fundacja Generacja Innowacja, 2026",
-  address: "ul. J. P. Woronicza 33/112, 02-640 Warszawa",
+  address: "ul. Twarda 18, 00-105 Warszawa",
   registration: "KRS 0001041229, NIP 5214023308",
   websiteLabel: "gi.org.pl",
   websiteHref: "https://gi.org.pl",
