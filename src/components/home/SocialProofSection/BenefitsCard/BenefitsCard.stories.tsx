@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { BENEFITS_CARD_WOLONTARY_PILL } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 import BenefitsCard from "./BenefitsCard";
-import {
-  BENEFITS_CARD_WOLONTARY_PILL
-} from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 
 const meta = {
   title: "Home/SocialProofSection/BenefitsCard",
@@ -11,7 +9,7 @@ const meta = {
     layout: "centered",
   },
   args: {
-    ...BENEFITS_CARD_WOLONTARY_PILL
+    ...BENEFITS_CARD_WOLONTARY_PILL,
   },
 } satisfies Meta<typeof BenefitsCard>;
 

@@ -1,12 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import { BENEFITS_CARD_WOLONTARY_PILL } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 import BenefitsCard from "./BenefitsCard";
-import {
-  BENEFITS_CARD_WOLONTARY_PILL
-} from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 
 const props = {
-  ...BENEFITS_CARD_WOLONTARY_PILL
+  ...BENEFITS_CARD_WOLONTARY_PILL,
 };
 
 describe("BenefitsCard", () => {
@@ -27,7 +25,7 @@ describe("BenefitsCard", () => {
     expect(badges).toHaveLength(props.benefits.length);
 
     expect(highlighted).toBeVisible();
-    expect(highlighted.querySelector('span')).toHaveClass('text-gi-blue');
+    expect(highlighted.querySelector("span")).toHaveClass("text-gi-blue");
   });
 
   it("renders a source label and link with href", () => {
