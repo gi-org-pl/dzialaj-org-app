@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import BenefitsCard from "./BenefitsCard";
+import {
+  BENEFITS_CARD_WOLONTARY_PILL
+} from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 
 const meta = {
   title: "Home/SocialProofSection/BenefitsCard",
@@ -8,17 +11,7 @@ const meta = {
     layout: "centered",
   },
   args: {
-    headingPrefix: "Wolontariat",
-    headingSuffix: "to tabletka, dzięki której:",
-    benefits: [
-      { id: "b1", label: "Zmniejszysz ryzyko depresji" },
-      { id: "b2", label: "Poprawisz swoje zdrowie" },
-      { id: "b3", label: "Będziesz żyć dłużej" },
-      { id: "b4", label: "I po prostu lepiej się czuć", highlighted: true },
-    ],
-    sourceLabel: "Serio.",
-    sourceLinkLabel: "Tu badania",
-    sourceLinkHref: "https://example.com/badania",
+    ...BENEFITS_CARD_WOLONTARY_PILL
   },
 } satisfies Meta<typeof BenefitsCard>;
 
