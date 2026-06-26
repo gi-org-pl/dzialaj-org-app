@@ -5,7 +5,6 @@ import { Link } from "react-router";
 export const Logo = () => {
   return (
     <Link to={PATHS.HOME}>
-      <img src={DzialajOrgLogo} alt="Działaj.org" width={104} height={24} />
-    </Link>
+      <DzialajOrgLogo height={24} className="w-auto" aria-hidden="true" />    </Link>
   );
 };
