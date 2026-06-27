@@ -17,23 +17,23 @@ const BenefitsCard: FC<BenefitsCardProps> = ({
       className="rounded-4xl border border-solid border-gi-light-gray"
       aria-labelledby="benefits-card-heading"
     >
-      <h3
+      <div
         id="benefits-card-heading"
         className="flex p-4 text-xl font-extrabold rounded-t-4xl bg-gi-blue/10 border-solid border-gi-light-gray overflow-hidden"
       >
-        <div className="max-w-70">
+        <h3 className="max-w-70">
           <span className="text-gi-blue leading-relaxed">{headingPrefix}</span>{" "}
           <span>{headingSuffix}</span>
-        </div>
+        </h3>
         <div className="w-20">
           <img
             src={pills}
-            alt="decorative ilustration"
+            alt=""
             aria-hidden="true"
             className="w10 h-10 scale-300 translate-x-9 translate-y-3 opacity-10"
           />
         </div>
-      </h3>
+      </div>
 
       <ul className="flex flex-col gap-3 px-4 pt-4">
         {benefits.map((b) => {
