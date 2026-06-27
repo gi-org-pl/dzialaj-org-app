@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { BENEFITS_CARD_WOLONTARY_PILL } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
+import { BENEFITS_CARD_VOLONTARY_PILL } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 import BenefitsCard from "./BenefitsCard";
 
 const props = {
-  ...BENEFITS_CARD_WOLONTARY_PILL,
+  ...BENEFITS_CARD_VOLONTARY_PILL,
 };
 
 describe("BenefitsCard", () => {

@@ -1,6 +1,6 @@
 import type { BenefitsCardProps } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.types.ts";
 
-export const BENEFITS_CARD_WOLONTARY_PILL: BenefitsCardProps = {
+export const BENEFITS_CARD_VOLONTARY_PILL: BenefitsCardProps = {
   headingPrefix: "Wolontariat",
   headingSuffix: "to tabletka, dzięki której:",
   benefits: [
