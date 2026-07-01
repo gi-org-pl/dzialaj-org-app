@@ -1,8 +1,8 @@
-import type { ReactNode } from "react";
+import type { ReactElement } from "react";
 
-export interface JobCardBadge {
+export interface JobBadge {
   id: string;
-  icon?: ReactNode;
+  icon: ReactElement;
   label: string;
   variant: "default" | "primary";
 }
@@ -10,8 +10,9 @@ export interface JobCardBadge {
 export interface JobCardProps {
   title: string;
   organisation: string;
-  avatarSrc?: string;
+  avatarSrc: string;
+  href: string;
   avatarAlt?: string;
-  badges: JobCardBadge[];
+  badges: JobBadge[];
   className?: string;
 }
