@@ -21,7 +21,7 @@ export function JobCard({
       href={href}
       aria-label={`${JOB_CARD_STRINGS.LINK_ARIA_LABEL_PREFIX} ${title}`}
       className={twMerge(
-        "block w-full min-w-0 max-w-full cursor-pointer rounded-2xl border border-gi-light-gray-dark bg-white p-4 text-left no-underline transition-colors hover:border-gi-gray",
+        "block w-full min-w-0 max-w-full cursor-pointer rounded-2xl border border-gi-light-gray-dark bg-white p-4 text-left no-underline transition-colors hover:border-gi-blue",
         className,
       )}
     >
