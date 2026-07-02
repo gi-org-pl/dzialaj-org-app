@@ -37,7 +37,7 @@ const B2bCallToActionContactCard = ({
   avatarAlt,
   illustrationSrc,
 }: B2bCallToActionProps) => (
-  <div className="relative flex flex-col gap-4 border border-gi-light-gray-dark overflow-visible rounded-2xl bg-white p-4 sm:p-6">
+  <div className="relative flex flex-col gap-4 border border-gi-light-gray-dark overflow-visible rounded-3xl bg-white p-4 sm:p-6">
     <div className="flex items-center gap-3">
       <Avatar
         size="large"
