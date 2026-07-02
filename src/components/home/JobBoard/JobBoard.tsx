@@ -188,7 +188,11 @@ export const JobBoard = ({
     />
     <JobBoardList jobs={jobs} />
     {hasMore ? (
-      <Button onClick={onLoadMore} className="w-fit">
+      <Button
+        variant="ngoPrimary"
+        onClick={onLoadMore}
+        className="w-fit font-extrabold"
+      >
         {JOB_BOARD_LOAD_MORE_LABEL}
       </Button>
     ) : null}

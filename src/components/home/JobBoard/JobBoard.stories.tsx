@@ -40,21 +40,3 @@ export const AllLoaded: Story = {
 };
 
 export const Empty: Story = {};
-
-export const Mobile: Story = {
-  args: {
-    hasMore: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ maxWidth: "375px" }}>
-        <Story />
-      </div>
-    ),
-  ],
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
-    },
-  },
-};
