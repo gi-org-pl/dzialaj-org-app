@@ -7,10 +7,8 @@ const B2bCallToActionSectionHeader = ({
   sectionSubtitle,
 }: B2bCallToActionProps) => (
   <div className="hidden flex-col gap-1 md:flex">
-    <h2 className="text-[32px] font-extrabold text-gi-primary">
-      {sectionHeading}
-    </h2>
-    <p className="text-[20px] text-gi-dark-gray  leading-[1.2]">
+    <h2 className="text-[32px] font-extrabold">{sectionHeading}</h2>
+    <p className="text-[20px] leading-[1.2] whitespace-pre-line">
       {sectionSubtitle}
     </p>
   </div>
@@ -22,11 +20,11 @@ const B2bCallToActionCardHeading = ({
   cardSubtitle,
 }: B2bCallToActionProps) => (
   <div className="flex flex-col items-center gap-1 leading-[1.5]">
-    <p className="text-[32px] font-extrabold text-gi-primary">
+    <p className="text-[32px] font-extrabold">
       {cardHeading} <span className="text-gi-blue">{cardHeadingHighlight}</span>
       ?
     </p>
-    <p className="text-gi-dark-gray text-xl">{cardSubtitle}</p>
+    <p className="text-xl">{cardSubtitle}</p>
   </div>
 );
 
@@ -39,7 +37,7 @@ const B2bCallToActionContactCard = ({
   avatarAlt,
   illustrationSrc,
 }: B2bCallToActionProps) => (
-  <div className="relative flex flex-col gap-4 border border-gi-dark-ash overflow-visible rounded-2xl bg-white p-4 sm:p-6">
+  <div className="relative flex flex-col gap-4 border border-gi-light-gray-dark overflow-visible rounded-2xl bg-white p-4 sm:p-6">
     <div className="flex items-center gap-3">
       <Avatar
         size="large"
@@ -49,8 +47,8 @@ const B2bCallToActionContactCard = ({
         alt={avatarAlt}
       />
       <div className="leading-[1.5] pl-2">
-        <p className="font-extrabold text-gi-primary">{contactName}</p>
-        <p className="text-gi-dark-gray">
+        <p className="font-extrabold">{contactName}</p>
+        <p>
           <span className="text-gi-blue">{contactTaglineHighlight}</span>{" "}
           {contactTagline}
         </p>
@@ -78,10 +76,10 @@ const B2bCallToActionContactCard = ({
 
 export const B2bCallToAction = (props: B2bCallToActionProps) => (
   <section className="w-full bg-white">
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 text-gi-navy">
       <B2bCallToActionSectionHeader {...props} />
 
-      <div className="flex flex-col gap-6 rounded-3xl border border-gi-ash bg-linear-to-b from-white to-gi-blue/10 p-6 md:grid md:grid-cols-2 md:items-center md:gap-8 min-h-[230px]">
+      <div className="flex flex-col gap-6 rounded-4xl border border-gi-ash bg-linear-to-b from-white to-gi-blue/10 px-4 py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8 min-h-[230px]">
         <B2bCallToActionCardHeading {...props} />
         <B2bCallToActionContactCard {...props} />
       </div>
