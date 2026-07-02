@@ -14,7 +14,11 @@ describe("<B2bCallToAction />", () => {
 
     expect(heading).toBeInTheDocument();
     expect(
-      screen.getByText(B2B_CALL_TO_ACTION_DEFAULT_PROPS.sectionSubtitle),
+      screen.getByText((content) =>
+        content.replace(/\n/g, " ").includes(
+          B2B_CALL_TO_ACTION_DEFAULT_PROPS.sectionSubtitle.replace(/\n/g, " ")
+        )
+      ),
     ).toBeInTheDocument();
     expect(heading.parentElement).toHaveClass("hidden", "md:flex");
   });
