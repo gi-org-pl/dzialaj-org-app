@@ -1,4 +1,4 @@
-import logoDzialaj from "@/assets/vectors/logo-dzialaj.svg";
+import LogoDzialajIcon from "@/assets/vectors/logo-dzialaj.svg";
 import {
   VALUE_PROPOSITION_COLUMN_HEADER,
   VALUE_PROPOSITION_HEADING_COMMA,
@@ -36,10 +36,10 @@ export const ValuePropositionTable = ({
                 className="w-[138px] p-0 font-normal"
               />
               <th scope="col" className="p-0 text-left font-normal">
-                <img
-                  src={logoDzialaj}
-                  alt={VALUE_PROPOSITION_LOGO_ALT}
+                <LogoDzialajIcon
                   className="h-6 w-auto"
+                  role="img"
+                  aria-label={VALUE_PROPOSITION_LOGO_ALT}
                 />
               </th>
               <th
