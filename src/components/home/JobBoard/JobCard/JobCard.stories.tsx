@@ -90,3 +90,48 @@ export const CityBased: Story = {
     ]),
   },
 };
+
+export const SocialMediaNinja: Story = {
+  args: {
+    ...JOB_CARD_DEFAULT_PROPS,
+    title: "Social Media Ninja",
+    organisation: "Fundacja Szczęśliwi",
+    avatarSrc: "",
+    badges: withIcons([
+      { id: "location", label: "Zdalnie", variant: "primary" },
+      { id: "time", label: "8 h/tyd.", variant: "default" },
+      { id: "duration", label: "3 mies.", variant: "default" },
+      { id: "skill", label: "Kreatywność", variant: "default" },
+    ]),
+  },
+};
+
+export const CreativeVideoEditor: Story = {
+  args: {
+    ...JOB_CARD_DEFAULT_PROPS,
+    title: "Creative Video Editor",
+    organisation: "Fundacja Ważne Sprawy",
+    avatarSrc: "",
+    badges: withIcons([
+      { id: "location", label: "Warszawa", variant: "primary" },
+      { id: "time", label: "5 h/tyd.", variant: "default" },
+      { id: "duration", label: "6 mies.", variant: "default" },
+      { id: "skill", label: "Edycja wideo", variant: "default" },
+    ]),
+  },
+};
+
+export const EventCoordinator: Story = {
+  args: {
+    ...JOB_CARD_DEFAULT_PROPS,
+    title: "Koordynator_ka wydarzeń",
+    organisation: "Stowarzyszenie Precedens",
+    avatarSrc: "",
+    badges: withIcons([
+      { id: "location", label: "Warszawa", variant: "primary" },
+      { id: "time", label: "8 h/tyd.", variant: "default" },
+      { id: "duration", label: "1 tydzień", variant: "default" },
+      { id: "skill", label: "Koordynacja", variant: "default" },
+    ]),
+  },
+};
