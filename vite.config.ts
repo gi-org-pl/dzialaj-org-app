@@ -7,7 +7,7 @@ import svgr from "vite-plugin-svgr";
 // https://vite.dev/config/
 export default defineConfig({
   esbuild: {
-    jsx: "automatic"
+    jsx: "automatic",
   },
   optimizeDeps: {
     esbuildOptions: {
