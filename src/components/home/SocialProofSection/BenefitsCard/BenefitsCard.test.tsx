@@ -1,6 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
-import { BENEFITS_CARD_VOLONTARY_PILL } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
+import {
+  BENEFITS_CARD_PILLS_ILLUSTRATION_ALT,
+  BENEFITS_CARD_VOLONTARY_PILL,
+} from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.constants.ts";
 import BenefitsCard from "./BenefitsCard";
 
 const props = {
@@ -36,9 +39,13 @@ describe("BenefitsCard", () => {
     expect(link).toHaveAttribute("href", props.sourceLinkHref);
   });
 
-  it("includes a decorative element marked aria-hidden", () => {
-    const { container } = render(<BenefitsCard {...props} />);
-    const decor = container.querySelector('[aria-hidden="true"]');
-    expect(decor).toBeTruthy();
+  it("renders the pills illustration with alt text for screen readers", () => {
+    render(<BenefitsCard {...props} />);
+
+    const pillsImage = screen.getByRole("img", {
+      name: BENEFITS_CARD_PILLS_ILLUSTRATION_ALT,
+    });
+
+    expect(pillsImage).not.toHaveAttribute("aria-hidden", "true");
   });
 });

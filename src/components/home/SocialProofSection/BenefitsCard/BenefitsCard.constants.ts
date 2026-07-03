@@ -1,5 +1,7 @@
 import type { BenefitsCardProps } from "@/components/home/SocialProofSection/BenefitsCard/BenefitsCard.types.ts";
 
+export const BENEFITS_CARD_PILLS_ILLUSTRATION_ALT = "Ilustracja tabletki symbolizującej wpływ wolontariatu na zdrowie";
+
 export const BENEFITS_CARD_VOLONTARY_PILL: BenefitsCardProps = {
   headingPrefix: "Wolontariat",
   headingSuffix: "to tabletka, dzięki której:",

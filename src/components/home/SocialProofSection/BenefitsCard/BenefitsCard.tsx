@@ -2,6 +2,7 @@ import { Badge } from "@gi/athena";
 import clsx from "clsx";
 import type { FC } from "react";
 import pills from "@/assets/images/pills.png";
+import { BENEFITS_CARD_PILLS_ILLUSTRATION_ALT } from "./BenefitsCard.constants";
 import type { BenefitsCardProps } from "./BenefitsCard.types";
 
 const BenefitsCard: FC<BenefitsCardProps> = ({
@@ -28,8 +29,8 @@ const BenefitsCard: FC<BenefitsCardProps> = ({
         <div className="w-20">
           <img
             src={pills}
-            alt=""
-            aria-hidden="true"
+            alt={BENEFITS_CARD_PILLS_ILLUSTRATION_ALT}
+            aria-hidden={BENEFITS_CARD_PILLS_ILLUSTRATION_ALT === ""}
             className="w10 h-10 scale-300 translate-x-9 translate-y-3 opacity-10"
           />
         </div>
