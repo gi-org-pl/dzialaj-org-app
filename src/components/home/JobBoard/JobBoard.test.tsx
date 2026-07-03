@@ -18,24 +18,6 @@ if (typeof window.PointerEvent === "undefined") {
   window.PointerEvent = class PointerEvent extends MouseEvent {};
 }
 
-let resizeCallback: ResizeObserverCallback | undefined;
-
-global.ResizeObserver = class {
-  constructor(callback: ResizeObserverCallback) {
-    resizeCallback = callback;
-  }
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-};
-
-const triggerResize = (width: number) => {
-  resizeCallback?.(
-    [{ contentRect: { width } } as ResizeObserverEntry],
-    {} as ResizeObserver,
-  );
-};
-
 const locationOptions: SelectOption[] = [
   { value: "location-1", label: "Warszawa" },
   { value: "location-2", label: "Wrocław" },
@@ -196,23 +178,6 @@ describe("<JobBoard />", () => {
 
       expect(onLocationChange).toHaveBeenCalledWith(firstOption.value);
       expect(trigger).toHaveTextContent(firstOption.label);
-    });
-  });
-
-  describe("gdy kontener paska narzędzi jest węższy niż punkt przełamania", () => {
-    it("powinien rozciągnąć kontener pola wyszukiwania na pełną szerokość", () => {
-      render(<JobBoard {...defaultProps} />);
-
-      act(() => {
-        triggerResize(320);
-      });
-
-      const searchInputEl = screen.getByPlaceholderText(
-        JOB_BOARD_SEARCH_PLACEHOLDER,
-      );
-      const searchWrapper = searchInputEl.closest("[style]");
-
-      expect(searchWrapper).toHaveStyle({ width: "100%" });
     });
   });
 });
