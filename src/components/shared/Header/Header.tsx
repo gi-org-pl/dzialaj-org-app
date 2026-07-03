@@ -20,7 +20,7 @@ const Header = ({ navLinks = HEADER_NAV_ITEMS, className }: HeaderProps) => {
         >
           <img
             src={LogoIcon}
-            alt="Generacja Innowacja"
+            alt="Działaj.org"
             className="h-6 w-auto"
           />
         </Link>
