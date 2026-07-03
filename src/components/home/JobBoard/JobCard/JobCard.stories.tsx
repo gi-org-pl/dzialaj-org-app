@@ -5,11 +5,7 @@ import GlobeIcon from "@/assets/icons/globe-icon.svg";
 import LightbulbIcon from "@/assets/icons/lightbulb-icon.svg";
 import LocationIcon from "@/assets/icons/location-icon.svg";
 
-import {
-  JOB_CARD_DEFAULT_ORGANISATION,
-  JOB_CARD_DEFAULT_PROPS,
-  JOB_CARD_DEFAULT_TITLE,
-} from "./JobCard.constants";
+import { JOB_CARD_DEFAULT_PROPS } from "./JobCard.constants";
 import { JobCard } from "./JobCard";
 import type { JobBadge } from "./JobCard.types";
 
@@ -79,6 +75,7 @@ export const Default: Story = {
 
 export const CityBased: Story = {
   args: {
+    ...JOB_CARD_DEFAULT_PROPS,
     title: "Project Manager",
     organisation: "Fundacja Działaj",
     avatarSrc: "",
