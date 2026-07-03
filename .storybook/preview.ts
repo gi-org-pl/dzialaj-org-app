@@ -1,10 +1,14 @@
 import type { Preview } from "@storybook/react-vite";
+import { MINIMAL_VIEWPORTS } from "storybook/viewport";
 
 import "@gi/athena/athena.css";
 import "../src/index.css";
 
 const preview: Preview = {
   parameters: {
+    viewport: {
+      options: MINIMAL_VIEWPORTS,
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
