@@ -17,12 +17,9 @@ const Header = ({ navLinks = HEADER_NAV_ITEMS, className }: HeaderProps) => {
         <Link
           to={HEADER_HOME_PATH}
           className="inline-flex items-center text-gi-light-gray transition-opacity duration-300 hover:opacity-80 focus:outline-none"
+          aria-label="Działaj.org"
         >
-          <img
-            src={LogoIcon}
-            alt="Działaj.org"
-            className="h-6 w-auto"
-          />
+          <LogoIcon className="h-6 w-auto" aria-hidden="true" />
         </Link>
 
         <nav

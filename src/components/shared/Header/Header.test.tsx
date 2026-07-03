@@ -21,7 +21,7 @@ describe("<Header />", () => {
         renderHeader();
 
         const logoLink = screen.getByRole("link", {
-          name: /generacja innowacja/i,
+          name: /działaj\.org/i,
         });
 
         expect(logoLink).toBeInTheDocument();
