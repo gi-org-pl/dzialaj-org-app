@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { SOCIAL_PROF_SECTION_DEFAULT_PROPS } from "./SocialProofSectioon.constants";
 import { SocialProofSection } from "./SocialProofSection";
+import { SOCIAL_PROF_SECTION_DEFAULT_PROPS } from "./SocialProofSectioon.constants";
 
 const meta = {
   title: "Home/SocialProofSection",

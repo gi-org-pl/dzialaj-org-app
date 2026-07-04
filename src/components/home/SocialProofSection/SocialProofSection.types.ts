@@ -4,7 +4,10 @@ import type { TestimonialCarouselProps } from "./TestimonialCarousel/Testimonial
 export type SocialProofSectionProps = {
   headingHighlight: string;
   headingRest: string;
+  subheadingHighlight: string;
+  subheadingRest: string;
   subtitle: string;
+  arrowIllustrationAlt: string;
   benefitsCardProps: BenefitsCardProps;
   testimonalCarouselProps: TestimonialCarouselProps;
 };
