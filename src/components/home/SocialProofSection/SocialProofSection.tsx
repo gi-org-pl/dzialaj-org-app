@@ -12,7 +12,7 @@ const SocialProofSectionHeader = ({
     <h2 className="text-[32px] font-extrabold">
       {headingRest} <span className="text-gi-blue">{headingHighlight}</span>!
     </h2>
-    <p className="text-[20px] whitespace-pre-line">{subtitle}</p>
+    <p className="text-xl whitespace-pre-line">{subtitle}</p>
   </div>
 );
 
@@ -21,7 +21,7 @@ const SocialProofSectionSubheader = ({
   subheadingRest,
   arrowIllustrationAlt,
 }: SocialProofSectionProps) => (
-  <div className="flex lg:flex-col text-gi-navy leading-[1.5] font-extrabold text-[20px] mb-4 mt-8 lg:mt-0">
+  <div className="flex lg:flex-col text-gi-navy leading-normal font-extrabold text-xl mb-4 mt-8 lg:mt-0">
     <img
       src={Arrow}
       alt={arrowIllustrationAlt}
