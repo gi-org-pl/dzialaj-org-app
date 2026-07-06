@@ -8,11 +8,11 @@ const SocialProofSectionHeader = ({
   headingRest,
   subtitle,
 }: SocialProofSectionProps) => (
-  <div className="text-gi-navy leading-[1.2] mb-8 lg:mb-6">
+  <div className="text-gi-navy leading-[1.2] mb-8 md:mb-6">
     <h2 className="text-[32px] font-extrabold">
       {headingRest} <span className="text-gi-blue">{headingHighlight}</span>!
     </h2>
-    <p className="text-xl whitespace-pre-line">{subtitle}</p>
+    <p className="text-xl whitespace-pre-line mt-2">{subtitle}</p>
   </div>
 );
 
@@ -21,14 +21,14 @@ const SocialProofSectionSubheader = ({
   subheadingRest,
   arrowIllustrationAlt,
 }: SocialProofSectionProps) => (
-  <div className="flex lg:flex-col text-gi-navy leading-normal font-extrabold text-xl mb-4 mt-8 lg:mt-0">
+  <div className="flex md:flex-col text-gi-navy leading-normal font-extrabold text-xl mb-4 mt-8 md:mt-0">
     <img
       src={Arrow}
       alt={arrowIllustrationAlt}
       aria-hidden={arrowIllustrationAlt === ""}
-      className="lg:hidden block w-[50px] rotate-90 -scale-y-100"
+      className="md:hidden block w-[50px] rotate-90 -scale-y-100"
     />
-    <h3 className="ml-4 lg:ml-0">
+    <h3 className="ml-4 md:ml-0">
       {subheadingRest} <br />{" "}
       <span className="text-gi-blue">{subheadingHighlight}</span>
     </h3>
@@ -38,8 +38,8 @@ const SocialProofSectionSubheader = ({
 export const SocialProofSection = (props: SocialProofSectionProps) => (
   <section className="w-full mx-auto max-w-7xl px-4 py-8">
     <SocialProofSectionHeader {...props} />
-    <div className="grid grid-cols-1 lg:grid-cols-2">
-      <div className="lg:mr-[20px]">
+    <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="md:mr-[20px]">
         <BenefitsCard {...props.benefitsCardProps} />
       </div>
       <div>
@@ -47,9 +47,9 @@ export const SocialProofSection = (props: SocialProofSectionProps) => (
           src={Arrow}
           alt={props.arrowIllustrationAlt}
           aria-hidden={props.arrowIllustrationAlt === ""}
-          className="hidden lg:block w-[92px] mt-24"
+          className="hidden md:block w-[92px] mt-24 mb-4"
         />
-        <div className="lg:ml-8">
+        <div className="md:ml-8">
           <SocialProofSectionSubheader {...props} />
           <TestimonialCarousel {...props.testimonalCarouselProps} />
         </div>
