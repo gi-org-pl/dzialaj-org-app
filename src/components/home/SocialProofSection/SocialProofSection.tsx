@@ -26,7 +26,7 @@ const SocialProofSectionSubheader = ({
       src={Arrow}
       alt={arrowIllustrationAlt}
       aria-hidden={arrowIllustrationAlt === ""}
-      className="md:hidden block w-[50px] rotate-90 -scale-y-100"
+      className="md:hidden block max-w-[50px] max-h-[60px] rotate-90 -scale-y-100"
     />
     <h3 className="ml-4 md:ml-0">
       {subheadingRest} <br />{" "}
