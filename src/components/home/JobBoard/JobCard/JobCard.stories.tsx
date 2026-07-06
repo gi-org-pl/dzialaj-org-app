@@ -5,7 +5,11 @@ import GlobeIcon from "@/assets/icons/globe-icon.svg";
 import LightbulbIcon from "@/assets/icons/lightbulb-icon.svg";
 import LocationIcon from "@/assets/icons/location-icon.svg";
 
-import { JOB_CARD_DEFAULT_PROPS } from "./JobCard.constants";
+import {
+  JOB_CARD_DEFAULT_ORGANISATION,
+  JOB_CARD_DEFAULT_PROPS,
+  JOB_CARD_DEFAULT_TITLE,
+} from "./JobCard.constants";
 import { JobCard } from "./JobCard";
 import type { JobBadge } from "./JobCard.types";
 
@@ -75,7 +79,6 @@ export const Default: Story = {
 
 export const CityBased: Story = {
   args: {
-    ...JOB_CARD_DEFAULT_PROPS,
     title: "Project Manager",
     organisation: "Fundacja Działaj",
     avatarSrc: "",
@@ -84,51 +87,6 @@ export const CityBased: Story = {
       { id: "skill", label: "Koordynacja", variant: "default" },
       { id: "time", label: "8 h/tyd.", variant: "default" },
       { id: "duration", label: "3 mies.", variant: "default" },
-    ]),
-  },
-};
-
-export const SocialMediaNinja: Story = {
-  args: {
-    ...JOB_CARD_DEFAULT_PROPS,
-    title: "Social Media Ninja",
-    organisation: "Fundacja Szczęśliwi",
-    avatarSrc: "",
-    badges: withIcons([
-      { id: "location", label: "Zdalnie", variant: "primary" },
-      { id: "time", label: "8 h/tyd.", variant: "default" },
-      { id: "duration", label: "3 mies.", variant: "default" },
-      { id: "skill", label: "Kreatywność", variant: "default" },
-    ]),
-  },
-};
-
-export const CreativeVideoEditor: Story = {
-  args: {
-    ...JOB_CARD_DEFAULT_PROPS,
-    title: "Creative Video Editor",
-    organisation: "Fundacja Ważne Sprawy",
-    avatarSrc: "",
-    badges: withIcons([
-      { id: "location", label: "Warszawa", variant: "primary" },
-      { id: "time", label: "5 h/tyd.", variant: "default" },
-      { id: "duration", label: "6 mies.", variant: "default" },
-      { id: "skill", label: "Edycja wideo", variant: "default" },
-    ]),
-  },
-};
-
-export const EventCoordinator: Story = {
-  args: {
-    ...JOB_CARD_DEFAULT_PROPS,
-    title: "Koordynator_ka wydarzeń",
-    organisation: "Stowarzyszenie Precedens",
-    avatarSrc: "",
-    badges: withIcons([
-      { id: "location", label: "Warszawa", variant: "primary" },
-      { id: "time", label: "8 h/tyd.", variant: "default" },
-      { id: "duration", label: "1 tydzień", variant: "default" },
-      { id: "skill", label: "Koordynacja", variant: "default" },
     ]),
   },
 };

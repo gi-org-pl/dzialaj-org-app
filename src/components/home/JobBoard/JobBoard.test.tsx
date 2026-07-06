@@ -28,15 +28,33 @@ const jobs: Job[] = [
     id: "1",
     title: "Job 1",
     organisation: "Organisation 1",
+    avatarSrc: "",
     avatarAlt: "Organisation 1",
-    badges: [{ id: "1-1", label: "Badge 1" }],
+    href: "#",
+    badges: [
+      {
+        id: "1-1",
+        label: "Badge 1",
+        variant: "default",
+        icon: <svg aria-hidden="true" />,
+      },
+    ],
   },
   {
     id: "2",
     title: "Job 2",
     organisation: "Organisation 2",
+    avatarSrc: "",
     avatarAlt: "Organisation 2",
-    badges: [{ id: "2-1", label: "Badge 2" }],
+    href: "#",
+    badges: [
+      {
+        id: "2-1",
+        label: "Badge 2",
+        variant: "default",
+        icon: <svg aria-hidden="true" />,
+      },
+    ],
   },
 ];
 

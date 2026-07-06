@@ -1,39 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import { JOB_CARD_DEFAULT_PROPS } from "./JobCard/JobCard.constants";
 import { JobBoard } from "./JobBoard";
 import type { Job } from "./JobBoard.types";
 
 const sampleJobs: Job[] = [
-  {
-    id: "job-1",
-    title: "Front-end Developer",
-    organisation: "Generacja Innowacja",
-    avatarSrc: "",
-    badges: [
-      { id: "location-1", label: "Zdalnie" },
-      { id: "skill-1", label: "Programowanie" },
-    ],
-  },
-  {
-    id: "job-2",
-    title: "Project Manager",
-    organisation: "Fundacja Działaj",
-    avatarSrc: "",
-    badges: [
-      { id: "location-2", label: "Warszawa" },
-      { id: "skill-2", label: "Koordynacja" },
-    ],
-  },
-  {
-    id: "job-3",
-    title: "Social Media Ninja",
-    organisation: "Fundacja Szczęśliwi",
-    avatarSrc: "",
-    badges: [
-      { id: "location-3", label: "Zdalnie" },
-      { id: "skill-3", label: "Kreatywność" },
-    ],
-  },
+  { id: "job-1", ...JOB_CARD_DEFAULT_PROPS, badges: [] },
+  { id: "job-2", ...JOB_CARD_DEFAULT_PROPS, badges: [] },
+  { id: "job-3", ...JOB_CARD_DEFAULT_PROPS, badges: [] },
 ];
 
 const meta = {

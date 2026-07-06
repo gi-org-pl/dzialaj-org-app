@@ -1,20 +1,12 @@
+import type { JobCardProps } from "./JobCard/JobCard.types";
+
 export interface SelectOption {
   value: string;
   label: string;
 }
 
-export interface JobBadge {
+export interface Job extends JobCardProps {
   id: string;
-  label: string;
-}
-
-export interface Job {
-  id: string;
-  title: string;
-  organisation: string;
-  avatarSrc: string;
-  avatarAlt?: string;
-  badges: JobBadge[];
 }
 
 export interface JobBoardProps {
