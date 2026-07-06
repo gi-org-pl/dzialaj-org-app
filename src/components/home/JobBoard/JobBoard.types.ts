@@ -12,8 +12,8 @@ export interface Job {
   id: string;
   title: string;
   organisation: string;
-  avatarSrc?: string;
-  avatarAlt: string;
+  avatarSrc: string;
+  avatarAlt?: string;
   badges: JobBadge[];
 }
 
