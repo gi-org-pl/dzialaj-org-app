@@ -1,5 +1,5 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import { JobBoard } from "./JobBoard";
 import {
@@ -69,10 +69,6 @@ const defaultProps: JobBoardProps = {
 };
 
 describe("<JobBoard />", () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   describe("gdy renderowany z domyślnymi propsami", () => {
     it("powinien wyświetlić łączną liczbę wyników i etykietę", () => {
       render(<JobBoard {...defaultProps} />);
