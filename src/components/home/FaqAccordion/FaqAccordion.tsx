@@ -19,8 +19,8 @@ export default function FaqAccordion({
 
   return (
     <div className="w-full flex flex-col items-center justify-between rounded-4xl border border-solid border-gi-light-gray">
-      <div className="w-full flex flex-nowrap items-center justify-between gap-4 px-6 py-6 md:py-8 rounded-t-4xl bg-gradient-to-t from-[var(--color-gi-blue)]/10 to-white">
-        <h2 className="flex-0 text-gi-blue text-2xl font-bold break-words leading-tight">
+      <div className="w-full flex flex-nowrap items-center justify-between gap-4 px-6 py-6 rounded-t-4xl bg-gradient-to-t from-[var(--color-gi-blue)]/10 to-white">
+        <h2 className="flex-1 min-w-0 text-gi-blue text-2xl font-bold leading-tight">
           {heading}
         </h2>
         <Select
