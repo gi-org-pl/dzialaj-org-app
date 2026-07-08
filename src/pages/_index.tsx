@@ -1,4 +1,5 @@
 import mascotLightbulbPose from "@/assets/images/mascot-lightbulb-pose.png";
+import { useState } from "react";
 import { B2bCallToAction } from "@/components/home/B2bCallToAction/B2bCallToAction";
 import { B2B_CALL_TO_ACTION_DEFAULT_PROPS } from "@/components/home/B2bCallToAction/B2bCallToAction.constants";
 import { CategoryFilters } from "@/components/home/CategoryFilters/CategoryFilters";
@@ -21,6 +22,9 @@ import Header from "@/components/shared/Header/Header";
 import { PATHS } from "@/constants/common";
 
 const Index = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(
+    CATEGORY_FILTERS_DATA.selectedId ?? null,
+  );
   const faqGroups = FAQ_GROUPS.map((group) => ({
     ...group,
     items: group.items.map((item) => ({ ...item })),
@@ -35,7 +39,12 @@ const Index = () => {
         <HeroSection {...HERO_SECTION_DEFAULT_PROPS} />
       </div>
       <div className="mx-auto w-full max-w-[800px] py-8">
-        <CategoryFilters {...CATEGORY_FILTERS_DATA} />
+        <CategoryFilters
+          title={CATEGORY_FILTERS_DATA.title}
+          categories={CATEGORY_FILTERS_DATA.categories}
+          selectedId={selectedCategory}
+          onChange={(id) => setSelectedCategory(id)}
+        />
       </div>
       <div className="mx-auto w-full max-w-[800px] pb-8">
         <ValuePropositionTable
