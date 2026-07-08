@@ -31,11 +31,11 @@ export function JobCard({
           alt={avatarAlt ?? JOB_CARD_STRINGS.ORGANISATION_LOGO_ALT_FALLBACK}
           fallback="initials"
           name={organisation}
-          className="size-12 shrink-0 bg-gi-ash text-gi-primary"
+          className="size-12 shrink-0 bg-gi-ash text-gi-navy"
         />
 
         <div className="min-w-0 flex-1">
-          <h3 className="truncate text-xl font-extrabold leading-tight text-gi-primary">
+          <h3 className="truncate text-xl font-extrabold leading-tight text-gi-navy">
             {title}
           </h3>
           <p className="mt-0.5 truncate text-base font-normal text-gi-dark-gray">

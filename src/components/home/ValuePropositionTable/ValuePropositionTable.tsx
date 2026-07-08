@@ -19,14 +19,14 @@ export const ValuePropositionTable = ({
       <h2 className="text-[32px] font-extrabold leading-[1.2]">
         <span className="block">
           <span className="text-gi-blue">{lineOne}</span>
-          <span className="text-gi-primary">
+          <span className="text-gi-navy">
             {VALUE_PROPOSITION_HEADING_COMMA}
           </span>
         </span>
-        <span className="block text-gi-primary">{lineTwo}</span>
+        <span className="block text-gi-navy">{lineTwo}</span>
       </h2>
 
-      <div className="relative rounded-3xl border border-gi-dark-ash">
+      <div className="relative rounded-3xl border border-gi-light-gray-dark">
         <table className="w-max border-separate border-spacing-6">
           <thead>
             <tr>
@@ -44,7 +44,7 @@ export const ValuePropositionTable = ({
               </th>
               <th
                 scope="col"
-                className="p-0 text-left text-xl font-extrabold leading-[1.2] text-gi-primary/50"
+                className="p-0 text-left text-xl font-extrabold leading-[1.2] text-gi-navy/50"
               >
                 {VALUE_PROPOSITION_COLUMN_HEADER}
               </th>
@@ -59,10 +59,10 @@ export const ValuePropositionTable = ({
                 >
                   {row.attribute}
                 </th>
-                <td className="p-0 text-base font-bold leading-[1.2] text-gi-primary">
+                <td className="p-0 text-base font-bold leading-[1.2] text-gi-navy">
                   {row.działajValue}
                 </td>
-                <td className="p-0 text-base leading-[1.2] text-gi-primary/50">
+                <td className="p-0 text-base leading-[1.2] text-gi-navy/50">
                   {row.jobBoardValue}
                 </td>
               </tr>

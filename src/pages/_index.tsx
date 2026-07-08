@@ -34,7 +34,7 @@ const Index = () => {
       <div className="mx-auto w-full max-w-[800px]">
         <HeroSection {...HERO_SECTION_DEFAULT_PROPS} />
       </div>
-      <div className="mx-auto w-full max-w-[800px] pb-8">
+      <div className="mx-auto w-full max-w-[800px] py-8">
         <CategoryFilters {...CATEGORY_FILTERS_DATA} />
       </div>
       <div className="mx-auto w-full max-w-[800px] pb-8">

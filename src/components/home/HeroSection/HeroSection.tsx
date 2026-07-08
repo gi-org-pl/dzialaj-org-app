@@ -24,7 +24,7 @@ const HeroSectionHeadline = ({
     id={HERO_SECTION_HEADLINE_ID}
     className="text-[32px] font-extrabold leading-[1.2] @lg:text-5xl"
   >
-    <span className="block text-gi-primary">{headlineLine1}</span>
+    <span className="block text-gi-navy">{headlineLine1}</span>
     <span className="block text-gi-blue">{headlineLine2}</span>
   </h1>
 );
