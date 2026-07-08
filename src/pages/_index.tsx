@@ -34,10 +34,10 @@ const Index = () => {
       <div className="mx-auto w-full max-w-[800px]">
         <HeroSection {...HERO_SECTION_DEFAULT_PROPS} />
       </div>
-      <div className="mx-auto w-full max-w-[800px] py-8">
+      <div className="mx-auto w-full max-w-[800px] pb-8">
         <CategoryFilters {...CATEGORY_FILTERS_DATA} />
       </div>
-      <div className="mx-auto w-full max-w-[800px] py-8">
+      <div className="mx-auto w-full max-w-[800px] pb-8">
         <ValuePropositionTable
           heading={VALUE_PROPOSITION_HEADING}
           rows={VALUE_PROPOSITION_DEFAULT_ROWS}
@@ -45,14 +45,14 @@ const Index = () => {
           illustrationAlt="Mascot holding a lightbulb"
         />
       </div>
-      <div className="mx-auto w-full max-w-[800px] py-8">
+      <div className="mx-auto w-full max-w-[800px] pt-8 pb-8">
         <FaqAccordion
           heading={FAQ_HEADING}
           groups={faqGroups}
           defaultGroupId={faqGroups[0]?.id ?? ""}
         />
       </div>
-      <div className="mx-auto w-full max-w-[800px] py-8">
+      <div className="mx-auto w-full max-w-[800px] pb-8">
         <B2bCallToAction {...B2B_CALL_TO_ACTION_DEFAULT_PROPS} />
       </div>
       <div className="mx-auto w-full max-w-[1200px]">

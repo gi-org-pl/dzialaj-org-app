@@ -70,8 +70,8 @@ export const HeroSection = (props: HeroSectionProps) => (
   >
     <div
       className={twMerge(
-        "@container relative mx-auto w-full max-w-7xl px-4 py-8",
-        "min-h-[200px] @lg:min-h-[252px] @lg:py-12",
+        "@container relative mx-auto w-full max-w-7xl pb-8",
+        "min-h-[200px] @lg:min-h-[252px] @lg:pb-12",
       )}
     >
       <HeroSectionIllustration {...props} />

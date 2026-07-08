@@ -76,7 +76,7 @@ const B2bCallToActionContactCard = ({
 
 export const B2bCallToAction = (props: B2bCallToActionProps) => (
   <section className="w-full bg-white">
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 text-gi-navy">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 text-gi-navy">
       <B2bCallToActionSectionHeader {...props} />
 
       <div className="flex flex-col gap-6 rounded-4xl border border-gi-ash bg-linear-to-b from-white to-gi-blue/10 px-4 py-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8 min-h-[230px]">
