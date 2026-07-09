@@ -21,7 +21,7 @@ export function JobCard({
       href={href}
       aria-label={`${JOB_CARD_STRINGS.LINK_ARIA_LABEL_PREFIX} ${title}`}
       className={twMerge(
-        "block w-full min-w-0 max-w-full cursor-pointer rounded-2xl border border-gi-light-gray-dark bg-white p-4 text-left no-underline transition-colors hover:border-gi-blue",
+        "block w-full min-w-0 max-w-full cursor-pointer rounded-2xl border border-gi-light-gray bg-white p-4 text-left no-underline transition-colors hover:border-gi-blue",
         className,
       )}
     >
@@ -38,7 +38,7 @@ export function JobCard({
           <h3 className="truncate text-xl font-extrabold leading-tight text-gi-navy">
             {title}
           </h3>
-          <p className="mt-0.5 truncate text-base font-normal text-gi-dark-gray">
+          <p className="mt-0.5 truncate text-base font-normal text-gi-navy">
             {organisation}
           </p>
         </div>
