@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 import {
@@ -44,8 +44,14 @@ export const TestimonialCarousel = ({
 
   const [position, setPosition] = useState(0);
   const [withTransition, setWithTransition] = useState(true);
+  const isAnimatingRef = useRef(false);
 
   const goToNext = useCallback(() => {
+    if (isAnimatingRef.current) {
+      return;
+    }
+
+    isAnimatingRef.current = true;
     setWithTransition(true);
     setPosition((current) => current + 1);
   }, []);
@@ -63,6 +69,8 @@ export const TestimonialCarousel = ({
   }, [autoPlayIntervalMs, goToNext, hasPagination]);
 
   const handleTransitionEnd = () => {
+    isAnimatingRef.current = false;
+
     if (position === testimonials.length) {
       setWithTransition(false);
       setPosition(0);
