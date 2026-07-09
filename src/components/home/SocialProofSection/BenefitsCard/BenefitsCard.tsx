@@ -20,7 +20,7 @@ const BenefitsCard: FC<BenefitsCardProps> = ({
     >
       <div
         id="benefits-card-heading"
-        className="flex p-4 text-xl font-extrabold rounded-t-4xl bg-gi-blue/10 border-solid border-gi-light-gray overflow-hidden"
+        className="flex justify-between p-4 text-xl font-extrabold rounded-t-4xl bg-gi-blue/10 border-solid border-gi-light-gray overflow-hidden"
       >
         <h3 className="max-w-70">
           <span className="text-gi-blue leading-relaxed">{headingPrefix}</span>{" "}
@@ -31,7 +31,7 @@ const BenefitsCard: FC<BenefitsCardProps> = ({
             src={pills}
             alt={BENEFITS_CARD_PILLS_ILLUSTRATION_ALT}
             aria-hidden={BENEFITS_CARD_PILLS_ILLUSTRATION_ALT === ""}
-            className="w10 h-10 scale-300 translate-x-9 translate-y-3 opacity-10"
+            className="w-10 h-10 scale-300 translate-y-3 translate-x-4 opacity-10"
           />
         </div>
       </div>
