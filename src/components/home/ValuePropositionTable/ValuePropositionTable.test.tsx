@@ -38,19 +38,19 @@ describe("<ValuePropositionTable />", () => {
         );
       });
 
-      it("renders the trailing comma in gi-primary on the first line", () => {
+      it("renders the trailing comma in gi-navy on the first line", () => {
         render(<ValuePropositionTable {...defaultProps} />);
 
         expect(screen.getByText(VALUE_PROPOSITION_HEADING_COMMA)).toHaveClass(
-          "text-gi-primary",
+          "text-gi-navy",
         );
       });
 
-      it("renders the second heading line in gi-primary", () => {
+      it("renders the second heading line in gi-navy", () => {
         render(<ValuePropositionTable {...defaultProps} />);
 
         expect(screen.getByText("których nie ma na job boardach.")).toHaveClass(
-          "text-gi-primary",
+          "text-gi-navy",
         );
       });
 
