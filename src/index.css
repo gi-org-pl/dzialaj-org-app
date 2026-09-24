@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap");
-@import "tailwindcss";
+@import "@gi-org-pl/athena/athena.css";
 
 :root {
   --font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;

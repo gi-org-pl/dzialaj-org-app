@@ -1,4 +1,4 @@
-import { Button } from "@gi/athena";
+import { Button } from "@gi-org-pl/athena";
 import { Link } from "react-router";
 import { twMerge } from "tailwind-merge";
 import SearchIcon from "@/assets/images/search-icon.png";

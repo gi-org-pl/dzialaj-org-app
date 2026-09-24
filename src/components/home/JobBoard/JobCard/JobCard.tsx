@@ -1,4 +1,4 @@
-import { Avatar } from "@gi/athena";
+import { Avatar } from "@gi-org-pl/athena";
 import { isValidElement } from "react";
 import { twMerge } from "tailwind-merge";
 import { JOB_CARD_STRINGS } from "./JobCard.constants";
@@ -57,10 +57,7 @@ export function JobCard({
             : "border border-gi-light-gray-dark bg-transparent text-gi-navy";
 
           return (
-            <span
-              key={badge.id}
-              className={`${badgeClass} ${badgeVariant}`}
-            >
+            <span key={badge.id} className={`${badgeClass} ${badgeVariant}`}>
               {isValidElement(badge.icon) && (
                 <span
                   aria-hidden="true"

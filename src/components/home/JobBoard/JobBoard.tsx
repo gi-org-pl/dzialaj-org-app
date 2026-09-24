@@ -1,4 +1,4 @@
-import { Button } from "@gi/athena";
+import { Button } from "@gi-org-pl/athena";
 
 import { JOB_BOARD_LOAD_MORE_LABEL } from "./JobBoard.constants";
 import type { JobBoardProps } from "./JobBoard.types";

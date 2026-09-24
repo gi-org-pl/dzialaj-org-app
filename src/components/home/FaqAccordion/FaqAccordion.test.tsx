@@ -7,7 +7,7 @@ import {
   FAQ_HEADING,
 } from "@/components/home/FaqAccordion/FaqAccordion.constants";
 
-vi.mock("@gi/athena", () => {
+vi.mock("@gi-org-pl/athena", () => {
   return {
     Select: ({ value, placeholder, children }: any) => (
       <div aria-label="select">

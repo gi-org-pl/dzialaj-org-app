@@ -1,4 +1,4 @@
-import { Avatar, Badge } from "@gi/athena";
+import { Avatar, Badge } from "@gi-org-pl/athena";
 
 import type { B2bCallToActionProps } from "./B2bCallToAction.types";
 
