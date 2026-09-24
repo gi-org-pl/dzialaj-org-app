@@ -1,4 +1,4 @@
-import { Badge } from "@gi/athena";
+import { Badge } from "@gi-org-pl/athena";
 import { twMerge } from "tailwind-merge";
 
 import { HERO_SECTION_HEADLINE_ID } from "./HeroSection.constants";

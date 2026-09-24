@@ -25,7 +25,7 @@ Project's main dependencies are listed below.
 | Axios        | ^1.x    |
 | Zustand      | ^5.x    |
 | Storybook    | ^10.x   |
-| @gi/athena   | latest  |
+| @gi-org-pl/athena | ^1.x |
 
 ### Package descriptions
 
@@ -38,7 +38,7 @@ Project's main dependencies are listed below.
 - **Playwright** - End-to-end testing framework for reliable cross-browser testing
 - **Zustand** - Lightweight state management library for React applications
 - **Storybook** - UI development environment and playground for building, previewing, and testing isolated components interactively
-- **@gi/athena** - Our front-end component package which you can [modify here](https://github.com/Generacja-Innowacja/athena)
+- **[@gi-org-pl/athena](https://www.npmjs.com/package/@gi-org-pl/athena)** - Our front-end component package, published to npm. You can [modify it here](https://github.com/gi-org-pl/athena)
 
 ## Infrastructure
 
@@ -159,12 +159,14 @@ yarn storybook:build  # Build Storybook for production deployment
 
 ## Working with Athena
 
-`@gi/athena` exports all ours reusable components. If you need new reusable component, please update athena package instead of creating a new component in the project. Create new components in the project only if they will be used only in this specific project.
+`@gi-org-pl/athena` exports all ours reusable components. If you need new reusable component, please update athena package instead of creating a new component in the project. Create new components in the project only if they will be used only in this specific project.
 
-If Athena has been updated, you need to upgrade local packages list to use new changes:
+Athena is installed from npm like any other dependency, no token or `.npmrc` needed. Its styles are loaded in `src/index.css` with `@import "@gi-org-pl/athena/athena.css";`, which also imports Tailwind CSS and Athena's theme.
+
+A new Athena version is published automatically after each merge to Athena's `main` (see [releases](https://github.com/gi-org-pl/athena/releases)). To use it:
 
 ```bash
-yarn upgrade @gi/athena
+yarn upgrade @gi-org-pl/athena --latest
 ```
 
 ## Resources

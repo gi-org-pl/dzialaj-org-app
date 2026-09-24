@@ -1,4 +1,4 @@
-import { Avatar } from "@gi/athena";
+import { Avatar } from "@gi-org-pl/athena";
 import { twMerge } from "tailwind-merge";
 
 import type { Testimonial } from "../TestimonialCarousel.types";
@@ -37,10 +37,7 @@ const TestimonialCardAuthor = ({
     <Avatar src={avatarSrc} alt={avatarAlt} size="medium" />
     <p className="text-base">
       <span className="font-extrabold text-gi-navy">{authorName}</span>
-      <span className="font-normal text-gi-navy">
-        {" "}
-        {authorOrganisation}
-      </span>
+      <span className="font-normal text-gi-navy"> {authorOrganisation}</span>
     </p>
   </footer>
 );

@@ -1,4 +1,4 @@
-import { Input } from "@gi/athena";
+import { Input } from "@gi-org-pl/athena";
 
 import SearchIcon from "@/assets/icons/search.svg";
 

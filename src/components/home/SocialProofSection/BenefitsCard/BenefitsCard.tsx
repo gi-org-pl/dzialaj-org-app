@@ -1,4 +1,4 @@
-import { Badge } from "@gi/athena";
+import { Badge } from "@gi-org-pl/athena";
 import clsx from "clsx";
 import type { FC } from "react";
 import pills from "@/assets/images/pills.png";

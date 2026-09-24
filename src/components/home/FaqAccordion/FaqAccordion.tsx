@@ -1,4 +1,4 @@
-import { ActionList, Select } from "@gi/athena";
+import { ActionList, Select } from "@gi-org-pl/athena";
 import { useState } from "react";
 import type { FaqAccordion } from "@/components/home/FaqAccordion/FaqAccordion.types.ts";
 import FaqItem from "@/components/home/FaqAccordion/FaqItem/FaqItem.tsx";
