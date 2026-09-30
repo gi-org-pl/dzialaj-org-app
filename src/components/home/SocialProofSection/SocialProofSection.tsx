@@ -36,7 +36,7 @@ const SocialProofSectionSubheader = ({
 );
 
 export const SocialProofSection = (props: SocialProofSectionProps) => (
-  <section className="w-full mx-auto max-w-7xl px-4 py-8">
+  <section className="w-full mx-auto max-w-7xl">
     <SocialProofSectionHeader {...props} />
     <div className="grid grid-cols-1 md:grid-cols-2">
       <div className="md:mr-[20px]">

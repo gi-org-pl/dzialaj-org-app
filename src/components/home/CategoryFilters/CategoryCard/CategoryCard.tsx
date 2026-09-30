@@ -9,7 +9,7 @@ export const CategoryCard = ({
 }: CategoryCardProps) => {
   return (
     <div
-      className={`relative p-4 rounded-2xl flex justify-between items-center border transition-[border, bg] duration-300 ${isSelected ? "border-gi-blue bg-gi-blue/10" : "border-gi-dark-ash bg-white cursor-pointer"}`}
+      className={`relative p-4 rounded-2xl flex justify-between items-center border transition-[border, bg] duration-300 ${isSelected ? "border-gi-blue bg-gi-blue/10" : "border-gi-light-gray-dark bg-white cursor-pointer"}`}
       onClick={onClick}
     >
       <div className="relative z-10">

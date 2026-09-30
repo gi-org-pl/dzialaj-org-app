@@ -90,7 +90,7 @@ describe("<JobCard />", () => {
 
         expect(cardLink).toHaveClass("p-4");
         expect(cardLink).toHaveClass("rounded-2xl");
-        expect(cardLink).toHaveClass("border-gi-light-gray-dark");
+        expect(cardLink).toHaveClass("border-gi-light-gray");
         expect(cardLink).toHaveClass("min-w-0", "max-w-full");
       });
 

@@ -41,7 +41,7 @@ const withIcons = (badges: Omit<JobBadge, "icon">[]): JobBadge[] =>
   }));
 
 const meta = {
-  title: "Components/Home/JobBoard/JobCard",
+  title: "Home/JobBoard/JobCard",
   component: JobCard,
   parameters: {
     layout: "padded",
