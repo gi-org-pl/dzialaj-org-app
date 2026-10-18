@@ -1,3 +1,5 @@
+![dzialaj-org-app header](https://raw.githubusercontent.com/gi-org-pl/dzialaj-org-app/main/.github/image/header.png)
+
 # Działaj.org
 
 ## Repository contents
